@@ -1,6 +1,6 @@
 {
   "name": "grunt-raygun-deployment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Grunt plugin for generating Deployment information for Raygun.io",
   "homepage": "https://raygun.io",
   "repository": "https://github.com/MindscapeHQ/grunt-raygun-deployment",
@@ -10,7 +10,9 @@
     "url": "https://raygun.io"
   },
   "keywords": [
-    "gruntplugin", "raygun", "deployment"
+    "gruntplugin",
+    "raygun",
+    "deployment"
   ],
   "main": "Gruntfile.js",
   "engines": {
