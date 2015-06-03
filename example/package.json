@@ -18,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-raygun-deployment": "^1.0.0",
+    "grunt-raygun-deployment": "*",
     "load-grunt-tasks": "~0.3.0"
   }
 }
