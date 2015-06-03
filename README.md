@@ -15,6 +15,7 @@ Then, add the following to `Gruntfile.js`:
         raygun_deployment: {
             options: {
                 // You need to fill this in with your own data
+                // Alternatively, set the RAYGUN_APIKEY and RAYGUN_AUTHTOKEN environment variables
                 raygunApiKey: 'YOUR APPLICATIONS API KEY',
                 raygunAuthToken: 'YOUR EXTERNAL AUTH TOKEN'
             }
@@ -25,6 +26,9 @@ Then, add the following to `Gruntfile.js`:
     
 
 You'll need the Raygun API Key for your application, plus an External Auth Token which you can generate [here](https://app.raygun.io/user).
+
+If you don't want to check your ApiKey or AuthToken into source control, you can pass them to grunt as environment variables instead.
+Run `RAYGUN_APIKEY="YOUR APPLICATIONS API KEY" RAYGUN_AUTHTOKEN="YOUR EXTERNAL AUTH TOKEN" grunt raygun_deployment` and leave the options out of Gruntfile.js.
 
 Finally, create a release file. We default to checking `Release.yml`, but you can set this path with the `release` option.
 
@@ -41,3 +45,8 @@ This is an example release file:
         ### Jamie
 
 Once you've written this to `Releases.yml`, run `grunt raygun_deployment` and your deployment will be sent to Raygun!
+
+## Changelog
+
+* 1.1.0 - Add ability to set AuthToken and API Key as environment variables.
+* 1.0.1 - Initial release.

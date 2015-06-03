@@ -21,18 +21,21 @@ module.exports = function (grunt) {
       useGit: true
     });
 
-    if(!options.raygunApiKey){
+    if(!options.raygunApiKey && !process.env.RAYGUN_APIKEY){
       grunt.fatal('Required option raygunApiKey is missing');
       return;
     }
-    if(!options.raygunAuthToken){
+    if(!options.raygunAuthToken && !process.env.RAYGUN_AUTHTOKEN){
       grunt.fatal('Required option raygunAuthToken is missing');
       return;
     }
 
+    var apiKey = options.raygunApiKey || process.env.RAYGUN_APIKEY;
+    var authToken = options.raygunAuthToken || process.env.RAYGUN_AUTHTOKEN;
+
     generate = function(release, gitHash) {
       var deployment = {
-        apiKey: options.raygunApiKey,
+        apiKey: apiKey,
         version: release.version,
         ownerName: release.ownerName,
         emailAddress: release.emailAddress,
@@ -45,7 +48,7 @@ module.exports = function (grunt) {
     send = function(data) {
       request.post({
         uri: options.raygunApiUri + '/deployments',
-        qs: { authToken: options.raygunAuthToken },
+        qs: { authToken: authToken },
         json: true,
         body: data
       }, end);

@@ -18,6 +18,7 @@ module.exports = function (grunt) {
     raygun_deployment: {
       options: {
         // You need to fill this in with your own data
+        // Alternatively, set the RAYGUN_APIKEY and RAYGUN_AUTHTOKEN environment variables
         raygunApiKey: 'YOUR APPLICATIONS API KEY',
         raygunAuthToken: 'YOUR EXTERNAL AUTH TOKEN'
       }
