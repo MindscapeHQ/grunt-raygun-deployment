@@ -56,7 +56,7 @@ If you'd rather set your release information in your Gruntfile.js you can setup 
           // You need to fill this in with your own data
           // Alternatively, set the RAYGUN_APIKEY and RAYGUN_AUTHTOKEN environment variables
           raygunApiKey: 'YOUR APPLICATIONS API KEY',
-          raygunAuthToken: 'YOUR EXTERNAL AUTH TOKEN'
+          raygunAuthToken: 'YOUR EXTERNAL AUTH TOKEN',
           release: {
             version: '6.1.0.0',
             ownerName: 'Jamie Penney',
