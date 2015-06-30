@@ -48,24 +48,24 @@ Once you've written this to `Releases.yml`, run `grunt raygun_deployment` and yo
 
 If you'd rather set your release information in your Gruntfile.js you can setup 'release' as an object under the grunt settings instead.
 
-  // Project configuration.
-  grunt.initConfig({
-    // Configuration to be run (and then tested).
-    raygun_deployment: {
-      options: {
-        // You need to fill this in with your own data
-        // Alternatively, set the RAYGUN_APIKEY and RAYGUN_AUTHTOKEN environment variables
-        raygunApiKey: 'YOUR APPLICATIONS API KEY',
-        raygunAuthToken: 'YOUR EXTERNAL AUTH TOKEN'
-        release: {
-          version: '6.1.0.0',
-          ownerName: 'Jamie Penney',
-          emailAddress: 'jamie@example.com',
-          notes: '#Testing out the grunt plugin\n* List item'
+    // Project configuration.
+    grunt.initConfig({
+      // Configuration to be run (and then tested).
+      raygun_deployment: {
+        options: {
+          // You need to fill this in with your own data
+          // Alternatively, set the RAYGUN_APIKEY and RAYGUN_AUTHTOKEN environment variables
+          raygunApiKey: 'YOUR APPLICATIONS API KEY',
+          raygunAuthToken: 'YOUR EXTERNAL AUTH TOKEN'
+          release: {
+            version: '6.1.0.0',
+            ownerName: 'Jamie Penney',
+            emailAddress: 'jamie@example.com',
+            notes: '#Testing out the grunt plugin\n* List item'
+          }
         }
       }
-    }
-  });
+    });
 
 ## Changelog
 
