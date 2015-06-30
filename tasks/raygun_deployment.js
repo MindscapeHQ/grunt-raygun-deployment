@@ -69,7 +69,13 @@ module.exports = function (grunt) {
       }
     };
 
-    var release = grunt.file.readYAML(options.release);
+    var release = null;
+
+    if(typeof options.release=="string"){
+      grunt.file.readYAML(options.release);
+    } else if(typeof options.release=="object"){
+      release = options.release;
+    }
 
     if(options.useGit) {
       grunt.util.spawn({
