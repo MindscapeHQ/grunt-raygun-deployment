@@ -71,9 +71,9 @@ module.exports = function (grunt) {
 
     var release = null;
 
-    if(typeof options.release=="string"){
-      grunt.file.readYAML(options.release);
-    } else if(typeof options.release=="object"){
+    if(typeof options.release === "string") {
+      release = grunt.file.readYAML(options.release);
+    } else if(typeof options.release === "object") {
       release = options.release;
     }
 
@@ -91,5 +91,4 @@ module.exports = function (grunt) {
       generate(release, '');
     }
   });
-
 };
