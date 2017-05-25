@@ -1,8 +1,8 @@
 /*
  * grunt-raygun-deployment-example
- * https://raygun.io
+ * https://raygun.com
  *
- * Copyright (c) 2015 Raygun.io
+ * Copyright (c) 2015 Raygun
  * Licensed under the MIT license.
  */
 

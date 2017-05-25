@@ -1,8 +1,8 @@
 /*
  * grunt-raygun-deployment
- * https://raygun.io
+ * https://raygun.com
  *
- * Copyright (c) 2015 Raygun.io
+ * Copyright (c) 2015 Raygun
  * Licensed under the MIT license.
  */
 
@@ -12,12 +12,12 @@ var request = require('request');
 
 module.exports = function (grunt) {
 
-  grunt.registerTask('raygun_deployment', 'Grunt plugin for generating Deployment information for Raygun.io', function () {
+  grunt.registerTask('raygun_deployment', 'Grunt plugin for generating deployment information for Raygun', function () {
     var finishedTask = this.async(), end, send, generate;
 
     var options = this.options({
       release: 'Release.yaml',
-      raygunApiUri: 'https://app.raygun.io',
+      raygunApiUri: 'https://app.raygun.com',
       useGit: true
     });
 
@@ -58,7 +58,7 @@ module.exports = function (grunt) {
       if(error) {
         grunt.fatal(error);
       } else if (res.statusCode === 200) {
-        grunt.log.writeln('Sent deployment info to Raygun.io');
+        grunt.log.writeln('Sent deployment info to Raygun');
         finishedTask();
       } else if(res.statusCode === 403) {
         grunt.fatal('Could not send deployment info to Raygun: your raygunApiKey is either wrong or you don\'t have access to that application');
