@@ -22,7 +22,7 @@ Then, add the following to `Gruntfile.js`:
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-raygun-deployment');
 
 
 You'll need the Raygun API Key for your application, plus an External Auth Token which you can generate [here](https://app.raygun.io/user).
