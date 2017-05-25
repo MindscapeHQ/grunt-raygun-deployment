@@ -1,8 +1,8 @@
 /*
  * grunt-raygun-deployment-example
- * https://raygun.io
+ * https://raygun.com
  *
- * Copyright (c) 2015 Raygun.io
+ * Copyright (c) 2015 Raygun
  * Licensed under the MIT license.
  */
 
@@ -23,8 +23,8 @@ module.exports = function (grunt) {
         raygunAuthToken: 'YOUR EXTERNAL AUTH TOKEN',
         release: {
           version: '6.1.0.0',
-          ownerName: 'Jamie Penney',
-          emailAddress: 'jamie@example.com',
+          ownerName: 'Ronald Raygun',
+          emailAddress: 'ronald@example.com',
           notes: '#Testing out the grunt plugin\n* List item'
         }
       }
